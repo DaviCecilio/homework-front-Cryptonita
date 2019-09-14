@@ -1,12 +1,10 @@
 import React from "react";
-//importando o componente de performance
-import { Performance } from "./Performance";
+import Home from "./Home";
 
 function App() {
   return (
     <div className="App">
-      {/*Renderizando componente de performance */}
-      <Performance />
+      <Home />
     </div>
   );
 }
