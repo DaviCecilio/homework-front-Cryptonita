@@ -54,20 +54,21 @@ export default class Performance extends Component {
     //Defini o Maior e o Menor
     //.map - Ferramenta que pecorre a Array
     performanceData.map(user => {
-      if (user.performance > maiorperformance)
+      if (user.performance >= maiorperformance) {
         maiorperformance = user.performance;
-      if (user.performance < menorperformance)
+      } else if (user.performance <= menorperformance)
         menorperformance = user.performance;
-    });
+    }
+    );
 
-    //Renderizando a Aplicação
+
 
     return (
       <div
         className="container-fluid text-center bg-2 p-4 borderbottom"
         id="secao2"
       >
-        <h1>Perfomance</h1>
+        <h1>Performance</h1>
         <hr className="divider my-3" />
 
         <div className="container mt-4">
@@ -92,12 +93,12 @@ export default class Performance extends Component {
 
                 <tbody>
                   <tr>
-                    <td colSpan="2">Maior Perfomance</td>
+                    <td colSpan="2">Maior Performance</td>
                     <td>{maiorperformance}</td>
                   </tr>
 
                   <tr>
-                    <td colSpan="2">Menor Perfomance</td>
+                    <td colSpan="2">Menor Performance</td>
                     <td>{menorperformance}</td>
                   </tr>
                 </tbody>
